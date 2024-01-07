@@ -1,0 +1,40 @@
+@use "../helpers/index" as *;
+
+.categories {
+    margin-top: 5px;
+    background-color:$third-color;
+    box-shadow: 0px 3px 33px 5px rgba(0,0,0,0.75);
+    
+
+    .container{
+        max-width: 1445px;
+    }
+
+    .categorie {
+        @include d-flex(10px);
+        padding: 20px 0 10px 0;
+        @include max-555 {
+            flex-direction: column;
+        }
+        .categorie-content {
+            display: block;
+            text-align: center;
+            flex: 0 0 1;
+            width: 270px;
+            .image {
+                overflow: hidden;
+                img {
+                max-width: 100%;
+                width: 270px;
+                height: 180px;
+                
+                }
+            }
+            h3{
+                color: $font-text;
+                padding-top: 10px;
+                text-transform: capitalize;
+            }
+        }
+    }
+}

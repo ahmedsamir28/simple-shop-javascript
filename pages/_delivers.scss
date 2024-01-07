@@ -1,0 +1,67 @@
+@use "../helpers/index" as *;
+
+.delivers {
+    box-shadow: 0px 3px 33px 5px rgba(0,0,0,0.75);
+    background-color: #343434;
+    position: relative;
+    z-index: 9;
+    margin: 5px 0;
+    .container {
+        .contain {
+            @include d-flex;
+            overflow: hidden;
+            padding: 10px 0 30px ;
+            .text {
+                flex: 0 0 auto;
+                color: $font-text;
+                @include max-992{
+                    text-align: center;
+                    max-width: 100%;
+                    margin: auto;
+                    }
+                h5{
+                    color: #aeaeae;
+                    padding-top: 20px;
+                    text-transform: capitalize;
+                }
+                h1{
+                    text-transform: uppercase ;
+                    color: $second-color;
+                    font-size: 60px;
+                    @include max-768{
+                        font-size: 40px;
+                    }
+                    @include max-555{
+                        font-size: 30px;
+                    }
+                    
+                }
+                p{
+                    min-width: 100%;
+                    line-height: 1.5;
+                    
+                }
+                button{
+                    margin-top: 20px;
+                    @extend %main-button;
+                    border: 2px solid black;
+
+                }
+
+            }
+            .image{
+                @include max-992{
+                display: none;
+                }
+                max-width: 400px;
+                position: relative;
+                top: 70px;
+                img{
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+

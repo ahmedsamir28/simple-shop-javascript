@@ -1,0 +1,122 @@
+@use "../helpers/index" as *;
+
+.black-screen {
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $third-color;
+  z-index: 50;
+  transform: translateX(150%);
+  transition: 0.7s;
+  overflow-y:scroll;
+  &::-webkit-scrollbar{
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: rgb(64, 64, 64);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #242222;
+  }
+
+  .closee {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    font-size: 22px;
+    opacity: 0.75;
+    transition: all 0.5s;
+    color: $font-text;
+
+    &:hover {
+      transform: rotate(180deg);
+      font-size: 24px;
+      opacity: 1;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+  }
+  h3{
+    text-align: center;
+    color: $font-text;
+    margin-top: 80px;
+    text-transform: uppercase;
+  }
+  .item-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 30px;
+    padding: 20px 0;
+    min-width: 400px;
+    
+    .item-containe{
+      @include d-flex;
+      border-bottom: 2px solid rgb(35, 35, 35);
+      padding-bottom: 10px;
+      color: $font-text;
+      .imageAndcontain{
+        @include d-flex;
+      @include  max-455 {
+      margin-left: 82px;
+      }
+      }
+      .image{
+        max-width: 100px;
+        max-height: 100px;
+        margin-right: 2rem;
+
+        img{
+          width: 100%;
+          border-radius: 5px;
+        }
+      }
+      .Items-content{
+        
+        .input-quantity{
+          display: block;
+          width:40px;
+          margin-top: 5px;
+          border: 2px solid black;
+        }
+        h6{
+          font-size: 15px;
+          text-transform: capitalize;
+        }
+        
+
+      }
+      .fa-trash{
+        padding: 20px;
+        font-size: 25px;
+        color: red;
+        cursor: pointer;
+        transition: 0.1s;
+        &:active{
+          font-size: 20px;
+        }
+      }
+      
+    }
+    
+    
+  }
+  .total{
+    font-size: 18px;
+    color: white;
+    text-align: end;
+    margin-right: 20px;
+    span:first-child{
+      margin-right: 10px;
+      text-transform: capitalize;
+
+    }
+  }
+  .buy-now{
+    margin-top: 10px;
+    text-align: center;
+  }
+}
